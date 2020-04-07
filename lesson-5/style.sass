@@ -1,0 +1,70 @@
+
+.box
+  position: relative
+button
+  width: 300px
+  font-size: 24px
+@keyframes slide-in-bck-top
+  0%
+    transform: translateZ(700px) translateY(-300px)
+    opacity: 0
+
+  100%
+    transform: translateZ(0) translateY(0)
+    opacity: 1
+
+@keyframes slide-out-bck-top
+  0%
+    transform: translateZ(1) translateY(0)
+    opacity: 1
+
+  100%
+    transform: translateZ(-1100px) translateY(-1000px)
+    opacity: 0
+
+table
+
+  border-collapse: collapse
+  margin-bottom: 50px
+  td
+    width: 30px
+    height: 30px
+    border: 1px solid black
+    text-align: center
+tr:last-child td:first-child
+  border-bottom: none
+  border-left: none
+.black
+  background-color: brown
+.white
+  background-color: coral
+
+
+.dialog
+  width: 500px
+  height: 200px
+  background-color: #cccccc
+  border: 1px solid #000000
+  font-size: 16px
+  display: none
+  position: absolute
+  top: 50px
+  left: 400px
+  z-index: 10
+.slide-out-bck-top
+  animation: slide-out-bck-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+.slide-in-bck-top
+  animation: slide-in-bck-top 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+.container
+  width: 1200px
+  margin: 0 auto
+  display: flex
+  justify-content: space-around
+.product
+  align-items: flex-start
+  display: flex
+  flex-direction: column
+  justify-content: center
+  width: 315px
+  &__button
+    margin-top: 10px
